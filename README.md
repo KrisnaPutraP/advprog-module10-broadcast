@@ -23,3 +23,11 @@ As we can see above, when I changed the client port to 8080, the client expects 
 ![servernewport](/img/servernewport.png)
 
 After I changed the port of the server's websocket to match the client's port, now the application will run just fine as before.
+
+## Small changes. Add some information to client
+
+![latestclient](/img/latestclient.png)
+![latestclient2](/img/latestclient2.png)
+![latestserver](/img/latestserver.png)
+
+At this stage, we are adding sender information for each client, including their IP address and port. This allows the client to identify who sent the message. To implement this change, the format of `bcast_tx.send` in `server.rs` needs to be modified.
